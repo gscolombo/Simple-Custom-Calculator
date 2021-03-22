@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+header {
+    width: 75vw;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.container {
+    width: 60vw;
+    margin: 50px auto;
+}
+
+.calculator {
+    background-color: grey;
+    margin: 0 auto;
+    display: grid;
+    height: 50vh;
+    width: 400px;
+    grid-template-columns: 100px 100px 100px 1fr;
+    grid-template-rows: 60px 1fr;
+}
+
+.visor {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.buttons {
+    grid-column: 1 / -1;
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 40px 1fr;
+}
+
+.buttons .misc {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0;
+    gap: 5%;
+}
+
+.misc .clear {
+    grid-column: 3;
+}
+
+.buttons .numbers {
+    display: grid;
+    padding: 20px 10px 20px 20px;
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+}
+
+[data-number] {
+    font-size: 18px;
+}
+
+.buttons .operators {
+    grid-row: 2 / 3;
+    display: grid;
+    gap: 5%;
+    padding: 20px;
+}
+
+.operation {
+    font-size: 28px;
+}
